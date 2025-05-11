@@ -1,0 +1,143 @@
+.categories-wrapper {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.highlight {
+  color: #0057D9;
+}
+
+.category-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
+  scrollbar-width: thin;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0.5rem;
+  transition: transform 0.2s;
+  background-color: #f9f9f9;
+  min-width: 80px;
+}
+
+.category-item:hover {
+  transform: scale(1.05);
+}
+
+.category-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+
+.category-item.active img {
+  border-color: #0057D9;
+}
+
+.product-list {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.no-products {
+  padding: 1rem;
+  color: #999;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .categories-wrapper {
+    padding: 1rem;
+  }
+
+  .category-item {
+    min-width: 60px;
+  }
+
+  .product-list {
+    justify-content: center;
+  }
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Show at the top */
+  z-index: 9999;
+  padding-top: 50px; /* space from top */
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn-cart,
+.btn-fav {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-cart {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-fav {
+  background-color: #f44336;
+  color: white;
+}
